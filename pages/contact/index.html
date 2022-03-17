@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../../styles/styles.css" />
+    <!-- rich site description -->
+    <meta
+      name="description"
+      content="CryptoLearners is an educational platform and suite of tools for learning about the world of crypto."
+    />
+    <!-- set keywords for search indexing -->
+    <meta name="keywords" content="cryptocurrency" />
+    <!-- author of this webpage (3400190, Tyler Palacsko) -->
+    <meta name="author" content="3400190" />
+    <!-- set viewport for devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CryptoLearner Title -->
+    <title>CryptoLearners | Contact</title>
+  </head>
+  <body>
+    <!-- begin header/navigation -->
+    <div class="navigationTop">
+      <ul class="navigation-ul">
+        <li class="navigation-li" id="navbarLogo">
+          <a href="../../index.html">
+            <img
+              id="navbar-img"
+              src="../../images/bitcoinIcon.png"
+              alt="Bitcoin"
+            />
+            <span>CryptoLearners</span>
+          </a>
+        </li>
+
+        <li class="dropdown-navigation">
+          <a class="dropdown-button">
+            Education
+            <i class="arrow-down"></i>
+          </a>
+          <div class="dropdown-content">
+            <a href="../education/beginners.html">Beginners </a>
+            <a href="../education/advanced.html">Advanced </a>
+          </div>
+        </li>
+        <li class="navigation-li">
+          <a href="../charts/index.html"> Charts </a>
+        </li>
+        <li class="navigation-li">
+          <a href="../tools/index.html"> Tools </a>
+        </li>
+        <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+          <ul class="mobile-menu">
+            <li>
+              <a href="../education/beginners.html">Beginners Learning </a>
+            </li>
+            <li>
+              <a href="../education/advanced.html">Advanced Learning</a>
+            </li>
+            <li><a href="../charts/index.html"> Charts </a></li>
+            <li><a href="../tools/index.html"> Tools </a></li>
+          </ul>
+        </div>
+      </ul>
+    </div>
+    <!-- end navigation -->
+    <div class="main-layout">
+      <div class="col-2">
+        <h2>Contact</h2>
+        <div class="section-1">
+          <h4>
+            Questions? Comments? Concerns? Get in touch with CryptoLearners by
+            sending an email through the form below.
+          </h4>
+          <form action="#">
+            <label for="email">Email:</label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value="email@example.com"
+            /><br />
+            <label for="fname">First name:</label><br />
+            <input type="text" id="fname" name="fname" value="John" /><br />
+            <label for="lname">Last name:</label><br />
+            <input type="text" id="lname" name="lname" value="Doe" /><br />
+            <label for="message">Message:</label><br />
+            <input
+              type="text"
+              id="message"
+              name="message"
+              value="message"
+            /><br /><br />
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+      <div class="col-3">
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+          "
+        >
+          <img
+            src="../../images/crypto-graduation.jpg"
+            alt="Crypto Graduation"
+            width="80%"
+            height="80%"
+            style="border-radius: 25px"
+          />
+        </div>
+        <h1 style="text-align: center">Thanks for getting in touch!</h1>
+      </div>
+    </div>
+    <!-- begin footer -->
+    <footer>
+      <div class="footer-content">
+        <h6>CryptoLearners | Crypto Education Website and Tools</h6>
+        <ul class="footer-links">
+          <li>
+            All icons retreived from
+            <a target="_blank" href="https://www.flaticon.com/">Flat Icon</a>
+          </li>
+          <li>
+            <a href="./index.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <!-- end footer -->
+    <script src="../../javascript/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <!-- rich site description -->
+    <meta
+      name="description"
+      content="CryptoLearners is an educational platform and suite of tools for learning about the world of crypto."
+    />
+    <!-- set keywords for search indexing -->
+    <meta name="keywords" content="cryptocurrency" />
+    <!-- author of this webpage (3400190, Tyler Palacsko) -->
+    <meta name="author" content="3400190" />
+    <!-- set viewport for devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CryptoLearner Title -->
+    <title>CryptoLearners</title>
+  </head>
+  <body>
+    <!-- begin header/navigation -->
+    <div class="navigationTop">
+      <ul class="navigation-ul">
+        <li class="navigation-li active" id="navbarLogo">
+          <a href="./index.html">
+            <img id="navbar-img" src="./images/bitcoinIcon.png" alt="Bitcoin" />
+            <span>CryptoLearners</span>
+          </a>
+        </li>
+
+        <li class="dropdown-navigation">
+          <a class="dropdown-button">
+            Education
+            <i class="arrow-down"></i>
+          </a>
+          <div class="dropdown-content">
+            <a href="./pages/education/beginners.html">Beginners </a>
+            <a href="./pages/education/advanced.html">Advanced </a>
+          </div>
+        </li>
+        <!-- </li> -->
+        <!-- go to javascript -->
+        <li class="navigation-li">
+          <a href="./pages/charts/index.html"> Charts </a>
+        </li>
+        <li class="navigation-li">
+          <a href="./pages/tools/index.html"> Tools </a>
+        </li>
+        <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+          <ul class="mobile-menu">
+            <li>
+              <a href="./pages/education/beginners.html">Beginners Learning </a>
+            </li>
+            <li>
+              <a href="./pages/education/advanced.html">Advanced Learning</a>
+            </li>
+            <li><a href="./pages/charts/index.html"> Charts </a></li>
+            <li><a href="./pages/tools/index.html"> Tools </a></li>
+          </ul>
+        </div>
+      </ul>
+    </div>
+    <!-- end navigation -->
+    <!-- Main page header -->
+    <!-- Header -->
+    <section class="hero">
+      <div class="grid-layout">
+        <div class="grid-container">
+          <div class="col-1">
+            <div class="hero-info">
+              <h1>Crypto<span>Learners</span></h1>
+              <p style="color: white">
+                The premier website for all things crypto and education.
+              </p>
+            </div>
+          </div>
+          <div class="col-4 right">
+            <div class="slideshow fade">
+              <img src="images/blob-1.png" />
+            </div>
+            <div class="slideshow fade">
+              <img src="images/blob-2.png" />
+            </div>
+            <div class="slideshow fade">
+              <img src="images/blob-3.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Begin main homepage -->
+    <div class="main-layout">
+      <div class="section-1">
+        <div class="flex-container">
+          <div class="flex-items">
+            <div class="heading">
+              <img
+                src="./images/educationIcon.png"
+                alt="Education Icon"
+                width="40"
+                height="40"
+              />
+              <h1 class="title">Basic Learning</h1>
+            </div>
+            <ul class="article-list">
+              <li>
+                <a href="pages/education/beginners.html#article1">Article 1</a>
+              </li>
+              <li>
+                <a href="pages/education/beginners.html#article2">Article 2</a>
+              </li>
+              <li>
+                <a href="pages/education/beginners.html#article3">Article 3</a>
+              </li>
+              <li>
+                <a href="pages/education/beginners.html#article4">Article 4</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex-items">
+            <div class="heading">
+              <img
+                src="./images/scienceIcon.png"
+                alt="Advanced Education Icon"
+                width="40"
+                height="40"
+              />
+              <h1 class="title">Advanced Learning</h1>
+            </div>
+
+            <ul class="article-list">
+              <li>
+                <a href="pages/education/advanced.html#article1">Article 1</a>
+              </li>
+              <li>
+                <a href="pages/education/advanced.html#article2">Article 2</a>
+              </li>
+              <li>
+                <a href="pages/education/advanced.html#article3">Article 3</a>
+              </li>
+              <li>
+                <a href="pages/education/advanced.html#article4">Article 4</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="section-2">
+        <div class="heading">
+          <h1 class="title">Trending Tokens</h1>
+        </div>
+
+        <div class="flex-container">
+          <div class="flex-items">
+            <table id="trending-tokens">
+              <tr>
+                <th>Token Name</th>
+                <th>Current Price</th>
+                <th>Market Cap</th>
+              </tr>
+              <tr>
+                <td>Bitcoin</td>
+                <td>$45,000</td>
+                <td>$100b</td>
+              </tr>
+              <tr>
+                <td>Ethereum</td>
+                <td>$4,000</td>
+                <td>$25b</td>
+              </tr>
+              <tr>
+                <td>Bitcoin</td>
+                <td>$45,000</td>
+                <td>$100b</td>
+              </tr>
+              <tr>
+                <td>Ethereum</td>
+                <td>$4,000</td>
+                <td>$25b</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end section 2 -->
+    <!-- end main homepage -->
+    <!-- begin footer -->
+    <footer>
+      <div class="footer-content">
+        <h6>CryptoLearners | Crypto Education Website and Tools</h6>
+        <ul class="footer-links">
+          <li>
+            All icons retreived from
+            <a target="_blank" href="https://www.flaticon.com/">Flat Icon</a>
+          </li>
+          <li>
+            <a href="./pages/contact/index.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <!-- end footer -->
+
+    <script src="./javascript/main.js">
+      showSlides();
+    </script>
+  </body>
+</html>

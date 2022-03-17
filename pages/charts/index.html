@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../../styles/styles.css" />
+
+    <!-- rich site description -->
+    <meta
+      name="description"
+      content="CryptoLearners is an educational platform and suite of tools for learning about the world of crypto."
+    />
+    <!-- set keywords for search indexing -->
+    <meta name="keywords" content="cryptocurrency" />
+    <!-- author of this webpage (3400190, Tyler Palacsko) -->
+    <meta name="author" content="3400190" />
+    <!-- set viewport for devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CryptoLearner Title -->
+    <title>CryptoLearners | Charts</title>
+  </head>
+  <body>
+    <!-- begin header/navigation -->
+    <div class="navigationTop">
+      <ul class="navigation-ul">
+        <li class="navigation-li" id="navbarLogo">
+          <a href="../../index.html">
+            <img
+              id="navbar-img"
+              src="../../images/bitcoinIcon.png"
+              alt="Bitcoin"
+            />
+            <span>CryptoLearners</span>
+          </a>
+        </li>
+
+        <li class="dropdown-navigation">
+          <a class="dropdown-button">
+            Education
+            <i class="arrow-down"></i>
+          </a>
+          <div class="dropdown-content">
+            <a href="../education/beginners.html">Beginners </a>
+            <a href="../education/advanced.html">Advanced </a>
+          </div>
+        </li>
+        <li class="navigation-li active">
+          <a href="./index.html"> Charts </a>
+        </li>
+        <li class="navigation-li">
+          <a href="../tools/index.html"> Tools </a>
+        </li>
+        <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+          <ul class="mobile-menu">
+            <li>
+              <a href="../education/beginners.html">Beginners Learning </a>
+            </li>
+            <li>
+              <a href="../education/advanced.html">Advanced Learning</a>
+            </li>
+            <li><a href="./index.html"> Charts </a></li>
+            <li><a href="../tools/index.html"> Tools </a></li>
+          </ul>
+        </div>
+      </ul>
+    </div>
+    <!-- end navigation -->
+    <!-- Begin main homepage -->
+    <section class="charts-layout">
+      <div class="row">
+        <div class="column">
+          <div class="heading">
+            <h1 class="title">Charts</h1>
+          </div>
+          <div class="charts">dynamic content placeholder (Charts)</div>
+          <div class="charts">dynamic content placeholder (Charts)</div>
+        </div>
+        <div class="column">
+          <div class="heading">
+            <h1 class="title">Prices</h1>
+          </div>
+          <div class="column">
+            <div class="flex-container">
+              <div class="flex-items">
+                <table id="trending-tokens">
+                  <tr>
+                    <th>Token Name</th>
+                    <th>Current Price</th>
+                  </tr>
+                  <tr>
+                    <td>Bitcoin</td>
+                    <td>$45,000</td>
+                  </tr>
+                  <tr>
+                    <td>Ethereum</td>
+                    <td>$4,000</td>
+                  </tr>
+                  <tr>
+                    <td>Bitcoin</td>
+                    <td>$45,000</td>
+                  </tr>
+                  <tr>
+                    <td>Ethereum</td>
+                    <td>$4,000</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="heading">
+            <h1 class="title">Lists</h1>
+          </div>
+          <div class="lists">dynamic content placeholder (Lists)</div>
+          <div class="pagination">
+            <a href="#" onclick="cryptoPaginate.previous()">&laquo;</a>
+            <a href="#" onclick="cryptoPaginate.next()">&raquo;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- begin footer -->
+    <footer>
+      <div class="footer-content">
+        <h6>CryptoLearners | Crypto Education Website and Tools</h6>
+        <ul class="footer-links">
+          <li>
+            All icons retreived from
+            <a target="_blank" href="https://www.flaticon.com/">Flat Icon</a>
+          </li>
+          <li>
+            <a href="../contact/index.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <!-- end footer -->
+    <script src="../../javascript/main.js"></script>
+    <!-- CDN served library for managing HTTP requests to 3rd party data providers/APIs -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+      // const cryptoPaginate = new CryptoList();
+      // let firstPage = [
+      //   ["dummyData 1"],
+      //   ["dummyData 2"],
+      //   ["dummyData 3"],
+      //   ["dummyData 4"],
+      //   ["dummyData 5"],
+      // ];
+      // let secondPage = [
+      //   ["dumberData 6"],
+      //   ["dumberData 7"],
+      //   ["dumberData 8"],
+      //   ["dumberData 9"],
+      //   ["dumberData 10"],
+      // ];
+      // cryptoPaginate.join(firstPage, secondPage);
+      // cryptoPaginate.current();
+
+      // set response equal to null
+      let response = null;
+      // create a new promise
+      new Promise(async (resolve, reject) => {
+        try {
+          // try to hit externa API with my generated API key
+          response = await axios.get(
+            "https://pro-api.coinmarketcap.com/v1/cryptocurrency/trending/latest",
+            {
+              headers: {
+                "X-CMC_PRO_API_KEY": "1ccf49a-cf45-4cf3-aa9d-e6b201b5c71c",
+                "Access-Control-Allow-Origin": "*",
+              },
+            }
+          );
+        } catch (ex) {
+          response = null;
+          // error
+          console.log(ex);
+          reject(ex);
+        }
+        if (response) {
+          // success
+          const json = response.data;
+          console.log(json);
+          resolve(json);
+        } else {
+          console.log("couldnt get data.");
+        }
+      });
+    </script>
+  </body>
+</html>
